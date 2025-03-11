@@ -2,6 +2,7 @@ package com.example.app
 
 import android.content.Context
 import android.graphics.*
+import androidx.core.graphics.toColorInt
 
 object ChartHelper {
     fun createIntensityBarBitmap(
@@ -41,8 +42,8 @@ object ChartHelper {
             val controlY2 = p2.y - (p3.y - p1.y) / 6
 
             val gradientColors = listOf(
-                Color.parseColor("#d1fdff"),
-                Color.parseColor("#fddb92")
+                "#d1fdff".toColorInt(),
+                "#fddb92".toColorInt()
             )
 
             // 确定渐变颜色
