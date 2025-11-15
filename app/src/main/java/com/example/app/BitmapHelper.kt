@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Typeface
+import androidx.core.graphics.createBitmap
 
 object BitmapHelper {
 
@@ -28,7 +29,7 @@ object BitmapHelper {
 
         val width = (paint.measureText(text) + letterSpacing * text.length).toInt()
         val height = (paint.descent() - paint.ascent()).toInt()
-        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        val bitmap = createBitmap(width, height)
         val canvas = Canvas(bitmap)
         canvas.drawText(text, 0f, -paint.ascent(), paint)
 

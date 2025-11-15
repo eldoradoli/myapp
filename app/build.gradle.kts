@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.example.app"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.app"
-        minSdk = 31
-        targetSdk = 34
+        minSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -69,9 +69,15 @@ dependencies {
     implementation(libs.vico.compose)
     implementation(libs.vico.compose.m3)
     implementation(libs.vico.views)
-
+//    implementation(libs.mpandroidchart)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
-
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.kalendar)
+    implementation(libs.constraintlayout.compose)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.runtime)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
